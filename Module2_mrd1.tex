@@ -69,6 +69,7 @@
 \newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\NormalTok}[1]{#1}
+\usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -162,6 +163,61 @@ You can also embed plots, for example:
 
 Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
 chunk to prevent printing of the R code that generated the plot.
+
+\includegraphics{Module2_mrd1_files/figure-latex/pressure2-1.pdf}
+
+\subsection{Insert Tables}\label{insert-tables}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}\KeywordTok{head}\NormalTok{(cars),}\DataTypeTok{caption=}\StringTok{"Top 6 Rows of cars dataset"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{longtable}[]{@{}rr@{}}
+\caption{Top 6 Rows of cars dataset}\tabularnewline
+\toprule
+speed & dist\tabularnewline
+\midrule
+\endfirsthead
+\toprule
+speed & dist\tabularnewline
+\midrule
+\endhead
+4 & 2\tabularnewline
+4 & 10\tabularnewline
+7 & 4\tabularnewline
+7 & 22\tabularnewline
+8 & 16\tabularnewline
+9 & 10\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Insert Equation}\label{insert-equation}
+
+\[ Y= \beta_0 + \beta_1x \]
+
+\subsection{Insert images}\label{insert-images}
+
+Here is an image inserted
+
+\begin{figure}
+\centering
+\includegraphics{images/sunstar.png}
+\caption{Sunstar}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{https://www.r-project.org/logo/Rlogo.svg}
+\caption{Rlogo}
+\end{figure}
+
+\subsection{Insert an animated GIF and
+video}\label{insert-an-animated-gif-and-video}
+
+\includegraphics{images/sunstar.gif}
+\includegraphics{images/sunstar.mp4}
 
 
 \end{document}
